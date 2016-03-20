@@ -5,7 +5,6 @@ import java.util.Scanner;
  */
 //main class dari class Apotek
 public class mainApotek {
-
     public static void main(String[] args) {
         //memasukkan fungsi scanner
         Scanner in = new Scanner(System.in);
@@ -29,8 +28,8 @@ public class mainApotek {
         alamat = in.nextLine();
         //overloading constructor berdasar inputan variabel nama dan alamat
         farma.Apotek(nama, alamat);
-        //pemanggilan constructor apotek
-        farma.Apotek();
+        //pemanggilan method pesan
+        farma.Pesan();
         //pemanggilan method Display untuk menampilkan total harga
         farma.Display();
     }

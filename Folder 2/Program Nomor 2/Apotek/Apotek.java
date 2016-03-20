@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Apotek {
 //deklarasi variabel apa saja yang dibutuhkan
     private String nama, alamat, obat, perulangan;
-    private int total, perlu;
+    private int Harga, perlu;
     private int jumlah1, jumlah2, jumlah3, jumlah4, jumlah5;
 //overloading constructor yang digunakan untuk mendeklarasikan nama dan alamat
     public void Apotek(String nama, String alamat) {
@@ -33,38 +33,38 @@ public class Apotek {
         System.out.println("5.   Sea Quil              20.000");
         System.out.println("-------------------------------------");
     }
- //constructor Apotek yang digunakan untuk menampilkan dan menseleksi pilihan
-    public void Apotek() {
+ //method pesan yang digunakan untuk menampilkan dan menseleksi pilihan
+    public void Pesan() {
         Scanner in = new Scanner(System.in);
         //perulangan pemilihan obat
         do {
             System.out.print("Masukkan Nomor obat : ");
             obat = in.next();
-            if (obat.equalsIgnoreCase("1")||obat.equalsIgnoreCase("Bodrex")) {     
+            if (obat.equalsIgnoreCase("1")) {     
                 System.out.println("Bodrex berharga         Rp." + 3000);
                 System.out.print("Berapa yang anda perlukan : ");
                 perlu = in.nextInt();
                 jumlah1 = perlu * 3000;
             }
-            else if (obat.equalsIgnoreCase("2")||obat.equalsIgnoreCase("Betadine")) {
+            else if (obat.equalsIgnoreCase("2")) {
                 System.out.println("Betadine Berharga       Rp." + 10000);
                 System.out.print("Berapa yang anda perlukan : ");
                 perlu = in.nextInt();
                 jumlah2 = perlu * 10000;
             }
-            else if (obat.equalsIgnoreCase("3")||obat.equalsIgnoreCase("Remason")) { 
+            else if (obat.equalsIgnoreCase("3")) { 
                 System.out.println("Remason Berharga        Rp. " + 8000);
                 System.out.print("Berapa yang anda perlukan : ");
                 perlu = in.nextInt();
                 jumlah3 = perlu * 8000;
             }
-            else if (obat.equalsIgnoreCase("4")||obat.equalsIgnoreCase("Amoksilin")) {   
+            else if (obat.equalsIgnoreCase("4")) {   
                 System.out.println("Amoksilin Berharga      Rp. " + 9000);
                 System.out.print("Berapa yang anda perlukan : ");
                 perlu = in.nextInt();
                 jumlah4 = perlu * 9000;
             }
-            else if (obat.equalsIgnoreCase("5")||obat.equalsIgnoreCase("Sea Quil")) {               
+            else if (obat.equalsIgnoreCase("5")) {               
                 System.out.println("Sea Quil Berharga         Rp. " + 20000);
                 System.out.print("Berapa yang anda perlukan : ");
                 perlu = in.nextInt();
@@ -75,9 +75,9 @@ public class Apotek {
         } while (!perulangan.equalsIgnoreCase("tidak"));
     }
 //method getTotal untuk menghitung jumlah obat yang dibeli   
-    public int getTotal() {
-        total = jumlah1 + jumlah2 + jumlah3 + jumlah4 + jumlah5;
-        return total;
+    public int getHarga() {
+        Harga = jumlah1 + jumlah2 + jumlah3 + jumlah4 + jumlah5;
+        return Harga;
     }
 //method Display yang digunakan untuk menampilkan struck user    
     public void Display() {
@@ -88,7 +88,7 @@ public class Apotek {
         System.out.println();
         System.out.println("Nama            : " + getNama());
         System.out.println("Alamat          : " + getAlamat());        
-        System.out.println("Total Harga     : Rp. " + getTotal());
+        System.out.println("Total Harga     : Rp. " + getHarga());
         System.out.println();
         System.out.println("        [=][=][=] TERIMA KASIH [=][=][=][=]");
         System.out.println("        ---------**************------------");
